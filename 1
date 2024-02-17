@@ -1,0 +1,49 @@
+
+namesInput = input("Type the names here: \n")
+names = list(namesInput.split(' '))
+
+numNames = len(names)
+import random
+randomChoice = random.randint(0, numNames - 1)
+choice = names[randomChoice]
+print(choice + " is going to pay for the meal today!")
+# print(names)
+# acceptableNames = list(range(1, 5))
+# print(acceptableNames)
+# if namesInput in acceptableNames:
+#     names.append(namesInput)
+# else:
+#     print("error: the acceptable range is between 1 and 4!")
+
+
+# print(names)
+# print("[{}]".format(", ".join(namesInput)))
+# print(x)
+
+# names = list(input("Type names here: \n"))
+# print(names)
+
+
+# namesInput = [_ for _ in input("Enter names here: ")]
+# print("names = [{}]".format(", ".join(namesInput)))
+
+from random import choice
+x = choice(names)
+
+if x == names[0]:
+    print(f"{names[0]} will pay for the bill today!")
+elif x == names[1]:
+    print(f"{names[1]} will pay for the bill today!")
+elif x == names[2]:
+    print(f"{names[2]} will pay for the bill today!")
+elif x == names[3]:
+    print(f"{names[3]} will pay for the bill today!")
+elif x == names[4]:
+    print(f"{names[4]} will pay for the bill today!")
+else:
+    print("error!")
+    
+    
+
+    
+# how to limit the amount of names a user can input?? 
