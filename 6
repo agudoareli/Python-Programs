@@ -1,0 +1,89 @@
+//  Created by Areli Agudo on 2/24/24.
+//  Copyright © 2024 Areli Agudo. All rights reserved.
+//
+
+// write a program that allows the user to input 0, 1, or 2 to play a rock, papers, scissors game
+
+
+
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"))
+
+
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+
+'''
+# this if statement is going to check input validation. if this input validation is met, then the code will continue in the else statement. if not met, all code will stop.
+
+if user_choice < 0 or user_choice >= 3:
+  print("error, invalid input")
+else:
+  if user_choice == 0:
+    print(rock)
+  elif user_choice == 1:
+    print(paper)
+  elif user_choice == 2:
+    print(scissors)
+  
+  
+  list = [rock, paper, scissors]
+  from random import choice
+  computer_choice = choice(list)
+  print("Computer chose:\n" + computer_choice) 
+  
+  
+  if user_choice == 0 and computer_choice == rock:
+    print("tie")
+  elif user_choice == 0 and computer_choice == paper:
+    print("you lose")
+  elif user_choice == 0 and computer_choice == scissors:
+    print("you win")
+  
+  elif user_choice == 1 and computer_choice == rock:
+    print("you win")
+  elif user_choice == 1 and computer_choice == paper:
+    print("tie")
+  elif user_choice == 1 and computer_choice == scissors:
+    print("you lose")
+  
+  elif user_choice == 2 and computer_choice == rock:
+    print("you lose")
+  elif user_choice == 2 and computer_choice == paper:
+    print("you win")
+  elif user_choice == 2 and computer_choice == scissors:
+    print("tie")
+
+
+
+
+
+
+
+
+
+
+
