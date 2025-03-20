@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(void) {
+
+   double nums[5], totalWeight = 0, temp;
+   for (int i = 1, j =0; i < 6; i++, j++)
+   {
+      printf("Enter weight %d:\n", i );
+      scanf("%lf", &nums[j]);
+   }
+   printf("You entered: ");
+   for (int i = 0; i < 5; i++)
+   {
+      printf("%.2lf ", nums[i]);
+   }
+   printf("\n");
+   
+   for (int i = 0; i < 5; i++)
+   {
+      totalWeight += nums[i];
+   }
+   printf("\nTotal weight: %.2lf", totalWeight);
+   printf("\nAverage weight: %.2lf", totalWeight / 5);
+   
+   for (int i = 0; i < 5; i++)
+   {
+      for (int j = 0; j < 5 - i - 1; j++)   // -i because last element will be sorted, -1 to prevent j from going outbound 
+      {
+         if (nums[j] > nums[j+1])    // put in ascending order and print the last index 
+         {
+            temp = nums[j];
+            nums[j] = nums[j+1];
+            nums[j+1] = temp;
+         }
+      }
+   }
+   printf("\nMax weight: %.2lf\n", nums[4]);
+   return 0;
+}
